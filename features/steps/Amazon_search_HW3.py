@@ -7,12 +7,11 @@ def open_amazon(context):
 
 
 @when ('Click on cart icon')
-def click_cart(context):
-    context.driver.get(By.CSS_SELECTOR, 'span.nav-cart-icon.nav-sprite').click()
+def select_cart(context):
+    context.driver.find_element(By.CSS_SELECTOR, 'span.nav-cart-icon').click()
 
 
 @then ('Verify Amazon Cart is empty')
 def verify_cart(context):
-    cart = context.driver.get(By.CSS_SELECTOR, 'span.nav-cart-count.nav-cart-0')
-    assert cart, f"Cart is not empty"
-    pass
+    cart = context.driver.find_element(By.CSS_SELECTOR, 'span.nav-cart-count.nav-cart-0')
+    assert cart, f"Cart is not zero"

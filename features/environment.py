@@ -31,14 +31,4 @@ def after_scenario(context, feature):
     context.driver.delete_all_cookies()
     context.driver.quit()
 
-#By ID
-driver.find_element(By.ID, 'ap_email')
-driver.find_element(By.ID, 'auth-fpp-link-bottom')
-
-#By XPATH
-driver.find_element(By.XPATH, "//input[@class='a-input-text a-span12 auth-autofocus auth-required-field']")
-driver.find_element(By.XPATH, "//input[@class='a-button-input']")
-
-#By Xpath, contains
-driver.find_element(By.XPATH, "//a[contains(@href, 'ap/forgotpassword?showRememberMe')]")
 
