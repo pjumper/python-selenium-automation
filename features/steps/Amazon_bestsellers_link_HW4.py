@@ -5,7 +5,7 @@ AMAZON_BESTSELLER_LINKS = (By.CSS_SELECTOR, "div[class*='_p13n-zg-nav-tab-all_st
 BESTSELLER_TAB = (By.CSS_SELECTOR, "a[href='/gp/bestsellers/?ref_=nav_cs_bestsellers']")
 
 
-@given('Open Amazon page_1')
+@given('Open Amazon bestseller page')
 def open_amazon_bestseller_page(context):
     context.driver.get('https://www.amazon.com/gp/bestsellers/?ref_=nav_cs_bestsellers')
 

@@ -2,5 +2,5 @@
 Feature: Amazon bestsellers link test
 
   Scenario: Bestseller has correct amount of links
-    Given Open Amazon page_1
+    Given Open Amazon bestseller page
     Then Verify bestseller has 5 links
