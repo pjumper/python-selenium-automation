@@ -1,0 +1,24 @@
+h1 {
+    background-color: coral;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+
+h3 {
+    font-size: 20px;
+    color:coral;
+}
+div.instructions {
+    background-color: coral;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+}
+
+div.ingredients {
+    background-color: coral;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+}

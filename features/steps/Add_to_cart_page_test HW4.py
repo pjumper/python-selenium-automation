@@ -9,9 +9,9 @@ OPEN_CART = (By.CSS_SELECTOR,"a[href='/gp/cart/view.html?ref_=sw_gtc']")
 CART = (By.CSS_SELECTOR, '#nav-cart-count')
 
 
-@given('Open Amazon page_1')
-def open_amazon_page(context):
-    context.driver.get('https://www.amazon.com/')
+#@given('Open Amazon page_1')
+#def open_amazon_page(context):
+#    context.driver.get('https://www.amazon.com/')
 
 
 @when('Input this text {text}')
@@ -32,6 +32,7 @@ def click_product_price(context):
 @when('Click on cart')
 def click_cart_icon(context):
     context.driver.find_element(*CART_ICON).click()
+
 
 
 @when('Open cart page')

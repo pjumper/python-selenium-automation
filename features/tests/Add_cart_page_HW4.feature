@@ -2,7 +2,7 @@
 Feature: Amazon add to cart test
 
   Scenario: User can add product to cart
-    Given Open Amazon page_1
+    Given Open Amazon page
     When Input this text adjustable dumbbell set
     When Click on search button
     And Click on product
