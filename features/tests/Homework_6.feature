@@ -1,5 +1,5 @@
 # Created by user at 3/16/23
-Feature:
+Feature: Amazon Privacy Notice Test
 
   Scenario: User can open and close Amazon Privacy Notice
     Given Open Amazon T&C page
