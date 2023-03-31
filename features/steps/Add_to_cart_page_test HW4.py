@@ -1,8 +1,8 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 
-AMAZON_SEARCH = (By.CSS_SELECTOR, '#twotabsearchtextbox')
-SEARCH_FIELD_SELECT = (By.CSS_SELECTOR, '#nav-search-submit-button')
+#AMAZON_SEARCH = (By.CSS_SELECTOR, '#twotabsearchtextbox')
+#SEARCH_FIELD_SELECT = (By.CSS_SELECTOR, '#nav-search-submit-button')
 PRODUCT_PRICE = (By.CSS_SELECTOR, 'span.a-price-whole')
 CART_ICON = (By.CSS_SELECTOR, '#add-to-cart-button')
 OPEN_CART = (By.CSS_SELECTOR,"a[href='/gp/cart/view.html?ref_=sw_gtc']")
@@ -16,14 +16,14 @@ CART = (By.CSS_SELECTOR, '#nav-cart-count')
 
 @when('Input this text {text}')
 def input_search_field(context, text):
-    context.driver.find_element(*AMAZON_SEARCH).send_keys(text)
-
+    #context.driver.find_element(*AMAZON_SEARCH).send_keys(text)
+    context.app.header.input_search_text(text)
 
 
 @when('Click on search button')
 def click_search_field(context):
-    context.driver.find_element(*SEARCH_FIELD_SELECT).click()
-
+    #context.driver.find_element(*SEARCH_FIELD_SELECT).click()
+    context.app.header.click_search()
 
 @when('Click on product')
 def click_product_price(context):

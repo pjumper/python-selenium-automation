@@ -3,8 +3,8 @@ from behave import given, when, then
 
 @given('Open Amazon page')
 def open_amazon_bestseller(context):
-    context.driver.get('https://www.amazon.com/')
-
+    #context.driver.get('https://www.amazon.com/')
+    context.app.main_page.open_main()
 
 @when ('Click on cart icon')
 def select_cart(context):
