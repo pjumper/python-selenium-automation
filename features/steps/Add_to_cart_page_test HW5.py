@@ -8,9 +8,9 @@ from selenium.webdriver.support import expected_conditions as EC
 AMAZON_SEARCH = (By.CSS_SELECTOR, '#twotabsearchtextbox')
 SEARCH_FIELD_SELECT = (By.CSS_SELECTOR, '#nav-search-submit-button')
 PRODUCT_PRICE = (By.CSS_SELECTOR, 'span.a-price-whole')
-CART_ICON = (By.CSS_SELECTOR, '#add-to-cart-button')
-OPEN_CART = (By.CSS_SELECTOR,"a[href='/gp/cart/view.html?ref_=sw_gtc']")
-CART = (By.CSS_SELECTOR, '#nav-cart-count')
+#CART_ICON = (By.CSS_SELECTOR, '#add-to-cart-button')
+#OPEN_CART = (By.CSS_SELECTOR,"a[href='/gp/cart/view.html?ref_=sw_gtc']")
+#CART = (By.CSS_SELECTOR, '#nav-cart-count')
 
 
 #@given('Open Amazon page_1')

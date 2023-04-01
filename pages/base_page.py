@@ -14,3 +14,10 @@ class Page:
 
     def input_text(self, text, *locator):
         self.driver.find_element(*locator).send_keys(text)
+
+    #def verify_text(self, expected_text, *locator):
+        #expected_text = self.driver.find_element(*locator).text
+        #assert expected_text == actual_result, f'Expected {expected_text} but got {actual_result}'
+
+    #def verify_cart(self,*locator):
+        #empty_cart =
