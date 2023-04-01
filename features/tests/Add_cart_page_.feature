@@ -5,7 +5,7 @@ Feature: Amazon add to cart test
     Given Open Amazon page
     When Input this text adjustable dumbbell set
     When Click search button
-    #And Click product
-    #And Click on cart button
-    #When Open cart
-    #Then Verify cart have 1 item(s)
+    And Click product
+    And Click on cart button
+    When Open cart
+    Then Verify cart have 1 item(s)

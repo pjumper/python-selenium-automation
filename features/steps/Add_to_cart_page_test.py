@@ -4,17 +4,12 @@ from behave import given, when, then
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-#AMAZON_SEARCH = (By.CSS_SELECTOR, '#twotabsearchtextbox')
-#SEARCH_FIELD_SELECT = (By.CSS_SELECTOR, '#nav-search-submit-button')
-#PRODUCT_PRICE = (By.CSS_SELECTOR, 'span.a-price-whole')
-#CART_ICON = (By.CSS_SELECTOR, '#add-to-cart-button')
-#OPEN_CART = (By.CSS_SELECTOR,"a[href='/gp/cart/view.html?ref_=sw_gtc']")
-#CART = (By.CSS_SELECTOR, '#nav-cart-count')
+
 
 
 @when('Input this text {text}')
 def input_search_field(context, text):
-    context.app.header.input_search_text(text)
+    context.app.header.input_search_text
 
 
 @when('Click search button')
@@ -22,23 +17,23 @@ def click_search_field(context):
     #context.driver.wait.until(EC.element_to_be_clickable(SEARCH_FIELD_SELECT)).click()
     context.app.header.click_search
 
-#@when('Click product')
-#def click_product_price(context):
+@when('Click product')
+def click_product_price(context):
     #context.driver.wait.until(EC.element_to_be_clickable(PRODUCT_PRICE)).click()
-
-#@when('Click on cart button')
-#def click_cart_icon(context):
-    #context.driver.wait.until(EC.element_to_be_clickable(CART_ICON)).click()
+    context.app.search_result_page.select_product_price
 
 
-#@when('Open cart')
-#def open_cart_page(context):
-    #context.driver.wait.until(EC.element_to_be_clickable(OPEN_CART)).click()
+@when('Click on cart button')
+def click_cart_icon(context):
+    context.app.header.add_cart
+
+@when('Open cart')
+def open_cart_page(context):
+    context.app.header.open_cart
 
 
-#@then('Verify cart have {expected_amount} item(s)')
-#def verify_cart_amount(context, expected_amount):
-    #actual_text = context.driver.find_element(*CART).text
-    #assert expected_amount == actual_text, f'Expected {expected_amount} but got {actual_text}'
+@then('Verify cart have {expected_amount} item(s)')
+def verify_cart_amount(context, expected_amount):
+    context.app.search_result_page.verify_cart_count
 
 

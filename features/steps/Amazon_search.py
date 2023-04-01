@@ -11,14 +11,14 @@ def click_orders_link(context):
 
 @then ('Verify Sign In page is opened')
 def verify_Sign_In(context):
-    context.app.search_result_page.verify_page_opened
+    context.app.sign_in_page.verify_page_opened
 
 
 @when ('Click on cart icon')
 def select_cart(context):
-    context.app.main_page.click_cart
+    context.app.header.click_cart
 
 @then ('Verify Amazon Cart is empty')
 def verify_cart(context):
-    cart = context.app.search_result_page.verify_empty_cart
+    cart = context.app.cart_page.verify_empty_cart
     assert cart, f"Cart is not zero"
