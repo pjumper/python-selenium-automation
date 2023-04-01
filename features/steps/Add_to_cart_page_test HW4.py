@@ -14,10 +14,10 @@ CART = (By.CSS_SELECTOR, '#nav-cart-count')
 #    context.driver.get('https://www.amazon.com/')
 
 
-@when('Input this text {text}')
-def input_search_field(context, text):
+#@when('Input this text {text}')
+#def input_search_field(context, text):
     #context.driver.find_element(*AMAZON_SEARCH).send_keys(text)
-    context.app.header.input_search_text(text)
+    #context.app.header.input_search_text(text)
 
 
 @when('Click on search button')
@@ -29,10 +29,10 @@ def click_search_field(context):
 def click_product_price(context):
     context.driver.find_element(*PRODUCT_PRICE).click()
 
+
 @when('Click on cart')
 def click_cart_icon(context):
     context.driver.find_element(*CART_ICON).click()
-
 
 
 @when('Open cart page')

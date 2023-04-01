@@ -8,7 +8,7 @@ class Header(Page):
     CLICK_ORDER_BUTTON = (By.CSS_SELECTOR, "a[href='/gp/css/order-history?ref_=nav_orders_first']")
 
     def input_search_text(self, text):
-        self.input_text('coffee', *self.AMAZON_SEARCH)
+        self.input_text(text, *self.AMAZON_SEARCH)
 
     def click_search(self, *locator):
         self.click(*self.SEARCH_FIELD_SELECT)
