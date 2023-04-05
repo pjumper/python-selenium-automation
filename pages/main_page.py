@@ -5,10 +5,10 @@ class MainPage(Page):
 
 
 
-    def open_main(self, url):
+    def open_main(self):
         self.open_url('https://www.amazon.com/')
 
-    def open_amazon_fashion(self, url):
+    def open_amazon_fashion(self):
         self.open_url('https://www.amazon.com/gp/product/B074TBCSC8')
 
 

@@ -8,7 +8,7 @@ class SearchResultPage(Page):
         SUBNAV = (By.CSS_SELECTOR, "#nav-subnav[data-category='{CATEGORY}']")
 
         def get_subnav_locator(self, category):
-                return [self.SUBNAV[0], self.SUBNAV[1].replace('{CATEGORY}',)]
+                return [self.SUBNAV[0], self.SUBNAV[1].replace('{CATEGORY}',category)]
 
         def verify_cart_count(self, expected_amount, *locator):
                 actual_text = self.context.driver.find_element(*self.CART_COUNT).text
@@ -20,5 +20,5 @@ class SearchResultPage(Page):
 
         def verify_selected_dept(self, category):
                 locator = self.get_subnav_locator(category)
-                self.wait_for_element_appear(*self.SUBNAV)
+                self.wait_for_element_appear(*locator)
 

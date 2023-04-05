@@ -16,9 +16,9 @@ class Header(Page):
     OPEN_CART = (By.CSS_SELECTOR, "a[href='/gp/cart/view.html?ref_=sw_gtc']")
     LANG_OPTIONS = (By.ID, '#icp-nav-flyout')
     SPANISH_LANG = (By.CSS_SELECTOR, "a[href='#switch-lang=es_US']")
-    DEPARTMENT_SELECTION = (By.ID, '#searchDropdownBox')
+    DEPARTMENT_SELECTION = (By.CSS_SELECTOR, '#searchDropdownBox')
     NEW_ARRIVAL = (By.CSS_SELECTOR, "a[href='/New-Arrivals/b/?_encoding=UTF8&node=17020138011&ref_=sv_sl_6']")
-    NEW_ARRIVAL_DISPLAY =(By.CSS_SELECTOR, )
+    NEW_ARRIVAL_DISPLAY =(By.XPATH, "//div[@class='mega-menu']/div/a/ul/li/h3")
 
     def input_search_text(self, text):
         self.input_text(text, *self.AMAZON_SEARCH)
@@ -26,7 +26,7 @@ class Header(Page):
     def click_search(self, *locator):
         self.click(*self.SEARCH_FIELD_SELECT)
 
-    def click_button(self, *locator):
+    def click_orders_link(self):
         self.click(*self.CLICK_ORDER_BUTTON)
 
     def click_cart(self, *locator):
@@ -54,7 +54,7 @@ class Header(Page):
     def select_department(self, alias):
         department_dd = self.find_element(*self.DEPARTMENT_SELECTION)
         select = Select(department_dd)
-        select.select_by_value(f'search-alias=[alias]')
+        select.select_by_value(f'search-alias={alias}')
 
     def hover_new_arrival(self):
         new_arrival = self.find_element(*self.NEW_ARRIVAL)

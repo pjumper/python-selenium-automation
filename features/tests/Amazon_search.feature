@@ -14,9 +14,9 @@ Feature: Amazon search test
 
   Scenario: User can select and search in a department
     Given Open Amazon page
-    When Select department by alias video games
+    When Select department by alias videogames
     When Input text Legend of Zelda
     When Click on search button
-    Then Verify video games department is selected
+    Then Verify videogames department is selected
 
 
