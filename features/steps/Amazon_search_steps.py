@@ -11,7 +11,7 @@ def open_amazon_fashion_page(context):
 
 @when ('Click Amazon Orders Link')
 def click_orders_link(context):
-    context.app.header.click_button()
+    context.app.header.click_orders_link()
 
 
 @when ('Click on cart icon')
