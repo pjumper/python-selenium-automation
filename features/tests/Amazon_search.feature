@@ -12,4 +12,11 @@ Feature: Amazon search test
     When Click on cart icon
     Then Verify Amazon Cart is empty
 
+  Scenario: User can select and search in a department
+    Given Open Amazon page
+    When Select department by alias video games
+    When Input text Legend of Zelda
+    When Click on search button
+    Then Verify video games department is selected
+
 

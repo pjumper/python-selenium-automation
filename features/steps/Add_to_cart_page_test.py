@@ -6,17 +6,6 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 
-
-@when('Input this text {text}')
-def input_search_field(context, text):
-    context.app.header.input_search_text
-
-
-@when('Click search button')
-def click_search_field(context):
-    #context.driver.wait.until(EC.element_to_be_clickable(SEARCH_FIELD_SELECT)).click()
-    context.app.header.click_search
-
 @when('Click product')
 def click_product_price(context):
     #context.driver.wait.until(EC.element_to_be_clickable(PRODUCT_PRICE)).click()

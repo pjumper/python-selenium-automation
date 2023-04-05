@@ -23,7 +23,7 @@ CART = (By.CSS_SELECTOR, '#nav-cart-count')
 @when('Click on search button')
 def click_search_field(context):
     #context.driver.find_element(*SEARCH_FIELD_SELECT).click()
-    context.app.header.click_search()
+    context.app.header.click_search
 
 @when('Click on product')
 def click_product_price(context):
